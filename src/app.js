@@ -8,6 +8,9 @@ const app = express();
 const indexRouter = require('./routes/index');
 const moviesRoutes = require('./routes/moviesRoutes');
 
+const rutaApiMovies = require("./routes/api/movies");
+app.use("/api/moviesApi", rutaApiMovies );
+
 
 // view engine
 app.set('views', path.resolve(__dirname, './views'));
