@@ -41,15 +41,15 @@ module.exports = (sequelize, dataTypes) => {
             as: "genre",
             foreignKey: "genre_id"
         })
+    }
+    return Movie
+};
 
-        // Movie.belongsToMany(models.Actor, { // models.Actor -> Actors es el valor de alias en actor.js
+//Otra forma de asociar modelos--
+ // Movie.belongsToMany(models.Actor, { // models.Actor -> Actors es el valor de alias en actor.js
         //     as: "actors",
         //     through: 'actor_movie',
         //     foreignKey: 'movie_id',
         //     otherKey: 'actor_id',
         //     timestamps: false
         // })
-    }
-
-    return Movie
-};
